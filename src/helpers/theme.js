@@ -10,6 +10,9 @@ const getTheme =(isDarkTheme) => createTheme({
 		type: isDarkTheme ? 'dark' : 'light',
 		background: {
 			default: isDarkTheme ? '#3D2647' : '#F5F5F5',
+			opposite: isDarkTheme ? '#F5F5F5' : '#3D2647',
+			light: '#F5F5F5',
+			dark: '#3D2647',
 		},
 		primary: {
 			dark: '#A636D6',

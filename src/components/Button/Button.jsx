@@ -1,25 +1,21 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import './button.css';
+import { MuiButton } from '@material-ui/core';
 
 const Button = ({
-	primary,
-	backgroundColor,
+	type,
 	size,
 	label,
-	...props
 }) => {
 
-	const mode = primary ? 'storybook-button--primary' : 'storybook-button--secondary';
 	return (
-		<button
-			type="button"
+		<MuiButton
 			className={['storybook-button', `storybook-button--${size}`, mode].join(' ')}
 			style={backgroundColor && { backgroundColor }}
 			{...props}
 		>
 			{label}
-		</button>
+		</MuiButton>
 	);
 };
 

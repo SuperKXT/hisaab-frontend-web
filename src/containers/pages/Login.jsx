@@ -1,8 +1,32 @@
+//@ts-check
+import { Grid } from '@material-ui/core';
+import { useTheme } from '@material-ui/styles';
+
+import Logo from 'components/Logo/Logo';
+
 const Login = () => {
+
+	const theme = useTheme();
+
 	return (
-		<div>
-			Login
-		</div>
+		<>
+			<Grid
+				container
+				justifyContent='center'
+				alignItems='center'
+				component='aside'
+			>
+				<Logo color='background' variant='opposite' width={{sdflsdf: 1}} />
+			</Grid>
+			<Grid
+				container
+				justifyContent='center'
+				alignItems='center'
+				component='main'
+			>
+
+			</Grid>
+		</>
 	)
 }
 

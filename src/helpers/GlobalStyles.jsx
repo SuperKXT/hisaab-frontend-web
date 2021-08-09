@@ -22,6 +22,8 @@ const useStyles = makeStyles(() =>
 			'#root': {
 				display: 'flex',
 				overflow: 'hidden',
+				width: '100%',
+				height: '100vh',
 			},
 			'::-webkit-scrollbar': {
 				height: 10,
