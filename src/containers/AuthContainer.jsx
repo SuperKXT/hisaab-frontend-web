@@ -21,7 +21,7 @@ const useStyles = makeStyles(theme => ({
 	},
 }));
 
-const Login = () => {
+const AuthContainer = () => {
 
 	const { setIsDarkTheme } = useContext(ThemeTypeContext);
 
@@ -88,12 +88,8 @@ const Login = () => {
 						Welcome to Hisaab!
 					</Typography>
 
-					<Grid
-						item
-						container
-						direction='column'
-						onSubmit={handleSubmit}
-						spacing={4}
+					<form
+						onSubmit={() => { }}
 					>
 
 						<TextField
@@ -108,19 +104,18 @@ const Login = () => {
 							variant='outlined'
 							label='Password'
 							type='password'
-							value={password}
-							onChange={(event) => setPassword(event.target.value)}
+							value={user}
+							onChange={(event) => setUser(event.target.value)}
 							required
 						/>
 
 						<Button
 							type='submit'
-							variant='contained'
 						>
 							Log in
 						</Button>
 
-					</Grid>
+					</form>
 
 				</Grid>
 
@@ -139,4 +134,4 @@ const Login = () => {
 	);
 };
 
-export default Login;
+export default AuthContainer;

@@ -54,9 +54,9 @@ const Logo = ({ color, variant, width, height, }) => {
 
 Logo.propTypes = {
 	color: PropTypes.oneOf(['primary', 'secondary', 'background']),
-	variant: PropTypes.oneOf(['main', 'light', 'dark', 'default']),
-	width: PropTypes.oneOf([PropTypes.number, PropTypes.string]),
-	height: PropTypes.oneOf([PropTypes.number, PropTypes.string]),
+	variant: PropTypes.oneOf(['main', 'light', 'dark', 'default', 'opposite']),
+	width: PropTypes.oneOfType([PropTypes.number, PropTypes.string]),
+	height: PropTypes.oneOfType([PropTypes.number, PropTypes.string]),
 };
 
 export default Logo;

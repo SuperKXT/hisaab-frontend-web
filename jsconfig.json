@@ -3,7 +3,6 @@
 		"baseUrl": "./src",
 		"checkJs": true,
 		"allowUmdGlobalAccess": true,
-
 		"jsx": "react",
 		"paths": {
 			"components": ["./components"],
@@ -12,7 +11,11 @@
 			"hooks": ["./hooks"],
 			"helpers": ["./helpers"],
 			"images": ["./images"]
-		}
+		},
+		"types": [
+			"node",
+			"webpack-env"
+		]
 	},
-	"include": ["src"],
+	"include": ["src"]
 }

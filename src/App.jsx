@@ -9,6 +9,8 @@ import MuiPickersUtilsProvider from '@material-ui/pickers/MuiPickersUtilsProvide
 import DayjsFnsUtils from '@date-io/dayjs';
 import { HelmetProvider } from 'react-helmet-async';
 
+import ThemeTypeContext from 'contexts/ThemeTypeContext';
+
 import GlobalStyles from 'helpers/GlobalStyles';
 import getTheme from 'helpers/theme';
 
@@ -56,26 +58,28 @@ const App = () => {
 			<SnackbarProvider maxSnack={3}>
 				<MuiPickersUtilsProvider utils={DayjsFnsUtils}>
 					<HelmetProvider>
+						<ThemeTypeContext.Provider value={{ isDarkTheme, setIsDarkTheme }}>
 
-						<CssBaseline />
-						<GlobalStyles />
+							<CssBaseline />
+							<GlobalStyles />
 
-						<Router>
+							<Router>
 
-							{pages.map(page =>
-								<Route
-									key={page}
-									path={`/${page.toLowerCase()}`}
-									exact
-								>
-									<RouteMatcher page={page} />
-								</Route>
-							)}
+								{pages.map(page =>
+									<Route
+										key={page}
+										path={`/${page.toLowerCase()}`}
+										exact
+									>
+										<RouteMatcher page={page} />
+									</Route>
+								)}
 
-							<Redirect to='/404' />
+								<Redirect to='/404' />
 
-						</Router>
+							</Router>
 
+						</ThemeTypeContext.Provider>
 					</HelmetProvider>
 				</MuiPickersUtilsProvider>
 			</SnackbarProvider>
