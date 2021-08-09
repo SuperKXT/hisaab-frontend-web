@@ -1,4 +1,3 @@
-//@ts-check
 import { Grid } from '@material-ui/core';
 import { useTheme } from '@material-ui/styles';
 
@@ -16,7 +15,7 @@ const Login = () => {
 				alignItems='center'
 				component='aside'
 			>
-				<Logo color='background' variant='opposite' width={{sdflsdf: 1}} />
+				<Logo color='background' variant='opposite' width={1} />
 			</Grid>
 			<Grid
 				container

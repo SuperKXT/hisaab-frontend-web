@@ -1,6 +1,9 @@
 {
 	"compilerOptions": {
 		"baseUrl": "./src",
+		"checkJs": true,
+		"allowUmdGlobalAccess": true,
+
 		"jsx": "react",
 		"paths": {
 			"components": ["./components"],

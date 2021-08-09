@@ -24,10 +24,10 @@ const useStyles = (color, variant, width, height,) => makeStyles(theme => ({
 
 /**
  * @param {object} props
- * @param {('primary'|'secondary'|'background')} props.color - the logo's color
- * @param {('main'|'light'|'dark'|'default'|'opposite')} props.variant - the logo's color variant (default and opposite are for color type 'background')
- * @param {(number|string)} props.width - the logo's width
- * @param {(number|string)} props.height - the logo's height
+ * @param {('primary'|'secondary'|'background')} [props.color] - the logo's color
+ * @param {('main'|'light'|'dark'|'default'|'opposite')} [props.variant] - the logo's color variant (default and opposite are for color type 'background')
+ * @param {(number|string)} [props.width] - the logo's width
+ * @param {(number|string)} [props.height] - the logo's height
  */
 const Logo = ({ color, variant, width, height, }) => {
 
