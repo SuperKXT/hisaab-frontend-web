@@ -15,6 +15,18 @@ const useStyles = makeStyles(theme => ({
 		position: 'fixed',
 		top: 15,
 		left: 15,
+		boxShadow: 'unset',
+		backgroundColor: theme.palette.primary.dark,
+		color: theme.palette.background.default,
+		transition: 'transform 0.05s linear',
+		'&:hover': {
+			backgroundColor: theme.palette.primary.dark,
+			transform: 'scale(1.05)',
+		},
+		'&:active': {
+			boxShadow: 'unset',
+			transform: 'scale(0.95)',
+		},
 	},
 	heading: {
 		fontWeight: 'normal',
@@ -128,12 +140,11 @@ const Login = () => {
 
 			<Fab
 				className={classes.themeButton}
-				color='default'
 				size='small'
 				aria-label='switch theme'
 				onClick={() => setIsDarkTheme(prevIsDarkTheme => !prevIsDarkTheme)}
 			>
-				<InvertColors color='primary' />
+				<InvertColors color='inherit' />
 			</Fab>
 		</>
 	);
