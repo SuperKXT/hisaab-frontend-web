@@ -12,7 +12,7 @@ import { HelmetProvider } from 'react-helmet-async';
 import ThemeTypeContext from 'contexts/ThemeTypeContext';
 
 import GlobalStyles from 'helpers/GlobalStyles';
-import getTheme from 'helpers/theme';
+import getTheme from 'helpers/getTheme';
 
 const pages = [];
 const importPages = (loaded) => {
