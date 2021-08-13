@@ -1,35 +1,19 @@
-import { createTheme, Theme, ThemeOptions } from '@material-ui/core/styles';
-import { Palette, TypeBackground } from '@material-ui/core/styles/createPalette';
-import { CustomPalette, CustomTheme } from '@material-ui/core/styles/createTheme';
+import { createTheme } from '@material-ui/core/styles';
 
-declare module '@material-ui/core/styles/createTheme' {
-
-	interface CustomBackground extends TypeBackground {
+declare module '@material-ui/core/styles/createPalette' {
+	interface TypeBackground {
 		opposite: React.CSSProperties['color'],
 		light: React.CSSProperties['color'],
 		dark: React.CSSProperties['color'],
 	}
-
-	interface CustomPalette extends Palette {
-		background: CustomBackground,
-	}
-
-	interface CustomTheme extends Theme {
-		palette: CustomPalette,
-	}
-
-	interface CustomThemeOptions extends ThemeOptions {
-		palette: CustomPalette,
-	}
-
-};
+}
 
 /**
  * Get the theme to pass to the ThemeProvider
  * @param {boolean} isDarkTheme - Is the current theme dark?
  * @returns {Theme} Material UI Theme
  */
-const getTheme =(isDarkTheme : boolean) => createTheme({
+const getTheme = (isDarkTheme: boolean) => createTheme({
 	palette: {
 		type: isDarkTheme ? 'dark' : 'light',
 		background: {
@@ -60,6 +44,6 @@ const getTheme =(isDarkTheme : boolean) => createTheme({
 			fontSize: '3em',
 		},
 	},
-} as CustomTheme);
+});
 
 export default getTheme;
