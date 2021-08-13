@@ -4,6 +4,10 @@
 		"checkJs": true,
 		"allowUmdGlobalAccess": true,
 		"jsx": "react",
+		"lib": ["es6", "dom"],
+		"noImplicitAny": true,
+		"noImplicitThis": true,
+		"strictNullChecks": true,
 		"paths": {
 			"components": ["./components"],
 			"containers": ["./containers"],
